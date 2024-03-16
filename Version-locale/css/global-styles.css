@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&family=Montserrat:wght@100&display=swap");
+@import url("https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css");
+@import url("style_accueil.css");
+@import url("style_contact.css");
+@import url("style_diapos.css");
+@import url("style_apropos.css");
+@import url("style_agriculture.css");
+@import url("style_immobilier.css");
+
+main{
+	width: 75%;
+	margin: auto;
+}
+
+
+body{
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.1em;
+}
+
+
+header{
+	background-color: goldenrod;
+	display: flex;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	height: 100px;
+	align-items: center;
+	position: sticky;
+	top:0;
+	z-index: 2;
+}
+
+
+footer{
+	display: flex;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	background-color: goldenrod;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+
+
+.footer_1{
+	display: flex;
+	grid-gap: 5px;
+	margin-left: 5px ;
+}
+
+
+.footer_2{
+	display: flex;
+	grid-gap: 10px;
+	margin-right: 5%;
+	flex-wrap: wrap;		/*Indique qu'il faut afficher en ligne*/
+}							/*Quand la largeur est insuffisante*/
+
+
+
+nav .menu{
+	list-style: none;
+	display: flex;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 25px;
+}
+
+
+.menu > li:hover{
+	background-color: white;
+}
+
+
+.menu > li{
+	border: 1px solid #cccccc;
+	padding: 3px;
+	border-radius: 10px;
+}
+
+nav{
+	margin-right: 5%;
+	top: 50%;
+}
+
+footer{
+	display: flex;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	bottom: 0;	
+}
+
+
+a{
+	text-decoration: none;
+	color: #000000;
+}
+
+
+.Logo{
+	display: flex;
+	background-color: whitesmoke;
+	text-align: center;
+	/*margin-left: 10%;*/
+	margin-right: auto;
+	height: 100px;
+	border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+	align-items: center;
+}
+
+
+#logo_mada{
+	width: 150px;
+	height: 150px;
+	margin-top: 0;
+}
+
+
+/*----------- SOUS-MENU -------------*/
+
+.sous_menu{
+	display: none;
+	position: absolute;
+	margin-right: 5%;
+}
+
+
+.menu li:hover .sous_menu,
+.menu li:focus .sous_menu {
+   display: block;
+   position: absolute;
+}
+
+
+.sous_menu li {
+   display: flex;
+   background-color: whitesmoke;
+   padding: 10px;
+   border-bottom: 1px solid #cccccc;
+}
+
+.sous_menu li:hover{
+	background-color: #EDD9D5;
+}
+
+
+/*-------- MEDIA QUERIES ----------*/
+@media screen and (max-width: 965px){
+	.Logo,.lien_accueil,.a_propos,.contact,.avenir{
+		display: none;
+	}
+
+	header{
+		grid-template-columns: 1fr;
+		justify-content: center;
+	}
+}
+
+
+@media screen and (max-width: 450px){
+	footer{
+		flex-direction: row;
+	}
+}
+
+
+/****************************************************/
+
+.titre{
+	text-align: center;
+}
+
+@media screen and (max-width: 736px){
+	.Corps_diapo{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
+		grid-row-gap: 5px;
+	}
+
+	.diapo{
+		height: 50%;
+	}
+
+
+	article{
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 325px){
+	.diapo{
+		display: none;
+	}
+}

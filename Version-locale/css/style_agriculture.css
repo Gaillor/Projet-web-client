@@ -1,0 +1,12 @@
+.graphe {
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.bar {
+  display: inline-block;
+  height: 100%;
+  border: 1px solid #ccc; 
+  background-color: darkgray;
+}

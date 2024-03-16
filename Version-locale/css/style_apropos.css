@@ -1,0 +1,30 @@
+.corps_apropos{
+	display: flex;
+	margin-top: 15px;
+	grid-template-columns: 1fr 1fr;
+	gap: 15px;
+}
+
+
+.les_mots_des_presidents{
+	height: 60%;
+	overflow-y: auto;
+}
+
+
+figure {
+  position: relative;
+  text-align: center;
+}
+
+
+figure img{
+	width: 50%;
+	height: 65%;
+	border-radius: 48% 52% 77% 23% / 56% 41% 59% 44% ;
+	text-align: center;
+}
+
+.expression{
+	background: whitesmoke;
+}

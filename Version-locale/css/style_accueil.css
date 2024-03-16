@@ -1,0 +1,84 @@
+.Bloc_Accueil{
+	grid-template-columns: 1fr 1fr;
+	gap: space-between;
+}
+
+#login-form{
+	width: 250px;
+	margin: auto;
+}
+
+#login-form fieldset{
+	margin-top: 5px;
+	border-radius: 10px ;
+}
+
+.bloc_accueil{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 10px;
+}
+
+.bloc_accueil{
+	width: 700px;
+	height: 350px;
+	margin: auto;
+	margin-top: 20px;
+	background-image: url("../images/img_divers/bg_accueil.jpg");
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+	/*border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;*/
+}
+
+
+.bloc{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #ccc;
+	box-shadow: 1px 1px 1px #ccc;
+	transition: background-image 1s ease;
+}
+
+
+.bloc:hover .bloc_accueil{
+	background-image: url("../images/img_immobilier/immo_1.jpg");
+}
+
+.bloc div > a{
+	color: black;
+	background-color: whitesmoke;
+}
+
+
+.mot_accueil{
+	margin-top: 10px;
+
+}
+
+.mot_accueil{
+	text-align: center;
+}
+
+
+/*------------ Réactivité au survol de chaque bloc d'accueil ------*/
+.bloc div>a:hover{
+	background-color: #F75424;
+}
+
+
+.bloc div>a:hover .bloc_accueil{
+	border-radius: 50% 50% 50% 50% / 50% 50% 50% 50% ;
+}
+
+
+@media screen and (max-width: 965px){
+	.bloc_accueil{
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		width: 70%;
+	}
+}
